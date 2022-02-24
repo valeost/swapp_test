@@ -1,0 +1,18 @@
+<mat-selection-list #person [multiple]="false">
+  <mat-list-option
+    *ngFor="let person of list.results"
+    [value]="person"
+    (click)="onSelect(person)"
+  >
+    {{ person.name }}
+  </mat-list-option>
+</mat-selection-list>
+
+<mat-paginator
+  [length]="list.count"
+  [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  aria-label="Select page"
+  (page)="changePage($event)"
+>
+</mat-paginator>

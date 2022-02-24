@@ -1,0 +1,11 @@
+<mat-list role="list" *ngFor="let film of actorFilms">
+  <mat-card>
+    <mat-card-title-group>
+      <mat-card-title>{{ film.title }}</mat-card-title>
+      <img mat-card-lg-image [src]="sWFilmImageMapping[film.url]" />
+    </mat-card-title-group>
+    <mat-card-content>
+      {{ film.opening_crawl }}
+    </mat-card-content>
+  </mat-card>
+</mat-list>
